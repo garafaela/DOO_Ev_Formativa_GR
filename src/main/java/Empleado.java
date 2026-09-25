@@ -72,7 +72,7 @@ public abstract class Empleado {
 
     public String mostrarInfo(){
         String info = "Nombre:  " + this.nombre +
-                "\nID: " + this.idEmpleado +
+                "\n ID: " + this.idEmpleado +
                 "\n Teléfono: " + this.telefono +
                 "\n Rol: " + obtenerRol() +
                 "\n Activo: " + this.activo +

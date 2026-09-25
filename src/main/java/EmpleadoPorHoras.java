@@ -2,7 +2,6 @@ public class EmpleadoPorHoras extends Empleado{
     // ATRIBUTOS
     private int horasTrabajadas;
     private double valorHora;
-    private double salario;
 
 
     // CONSTRUCTOR
@@ -10,8 +9,8 @@ public class EmpleadoPorHoras extends Empleado{
         super(nombre, idEmpleado, telefono, activo);
         this.horasTrabajadas = 0;
         this.valorHora = valorHora;
-        this.salario = 0;
     }
+
 
     // GETTERS Y SETTERS
     public int getHorasTrabajadas() {
@@ -26,19 +25,12 @@ public class EmpleadoPorHoras extends Empleado{
     public void setValorHora(double valorHora) {
         this.valorHora = valorHora;
     }
-    public double getSalario() {
-        return salario;
-    }
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
 
     // MÉTODOS SOBREESCRITOS
     @Override
     public double calcularSalario(){
-        double salarioCalculado = this.horasTrabajadas * this.valorHora;
-        setSalario(salarioCalculado);
-        return salarioCalculado;
+        double salario = this.horasTrabajadas * this.valorHora;
+        return salario;
     }
 
     @Override
@@ -49,7 +41,7 @@ public class EmpleadoPorHoras extends Empleado{
     @Override
     public String mostrarInfo(){
         super.mostrarInfo();
-        String info_adicional = "\n Horas Trabajadas: "+ this.horasTrabajadas +
+        String info_adicional = "\n Horas Trabajadas: "+ this.horasTrabajadas + " horas"+
                 "\n Valor Hora: $" + this.valorHora;
         return info_adicional;
     }
